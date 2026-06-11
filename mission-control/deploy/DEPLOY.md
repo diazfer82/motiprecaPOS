@@ -15,7 +15,7 @@ El hosting compartido de HostGator no se toca — solo su zona DNS.
      este registro se agrega en el panel del registrador.
 2. Agrega un registro:
    - **Tipo:** `A`
-   - **Nombre:** `mc` (queda `ko.punch.com.mx`)
+   - **Nombre:** `ko` (queda `ko.punch.com.mx`)
    - **Valor:** la IP pública de tu VPS de Hostinger (la ves en hPanel → VPS)
    - **TTL:** 300
 3. Verifica (puede tardar 5–30 min): `nslookup ko.punch.com.mx` debe regresar
