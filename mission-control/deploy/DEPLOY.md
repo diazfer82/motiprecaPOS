@@ -1,4 +1,4 @@
-# Hostear el Mission Control en mc.punch.com.mx
+# Hostear el Mission Control en ko.punch.com.mx
 
 **Arquitectura:** el VPS de Hostinger corre la app (Docker + Caddy con HTTPS
 automático de Let's Encrypt) y el DNS de punch.com.mx (administrado donde está
@@ -15,10 +15,10 @@ El hosting compartido de HostGator no se toca — solo su zona DNS.
      este registro se agrega en el panel del registrador.
 2. Agrega un registro:
    - **Tipo:** `A`
-   - **Nombre:** `mc` (queda `mc.punch.com.mx`)
+   - **Nombre:** `mc` (queda `ko.punch.com.mx`)
    - **Valor:** la IP pública de tu VPS de Hostinger (la ves en hPanel → VPS)
    - **TTL:** 300
-3. Verifica (puede tardar 5–30 min): `nslookup mc.punch.com.mx` debe regresar
+3. Verifica (puede tardar 5–30 min): `nslookup ko.punch.com.mx` debe regresar
    la IP del VPS. **No sigas al paso 3 hasta que resuelva**, porque Let's
    Encrypt necesita el DNS activo para emitir el certificado.
 
@@ -60,7 +60,7 @@ docker compose up -d --build
 docker compose exec app node scripts/seed-users.js
 ```
 
-Abre https://mc.punch.com.mx — debe cargar el login con candado verde.
+Abre https://ko.punch.com.mx — debe cargar el login con candado verde.
 
 ## Paso 4 — Primer acceso (cada usuario)
 

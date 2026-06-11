@@ -1,4 +1,4 @@
-mc.punch.com.mx {
+ko.punch.com.mx {
 	encode gzip
 	reverse_proxy app:8443
 

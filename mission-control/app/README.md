@@ -1,4 +1,4 @@
-# PUNCH! Mission Control — App web (mc.punch.com.mx)
+# PUNCH! Mission Control — App web (ko.punch.com.mx)
 
 Dashboard confidencial de Punch con login, roles, 2FA y **PUNCHI 🥊**, el asistente
 de IA que responde cualquier pregunta de la operación consultando Airtable y Asana
@@ -40,7 +40,7 @@ en tiempo real.
 | `PORT` | — | default `8443` |
 | `DATA_DIR` | — | carpeta de usuarios/auditoría (persistir en un volumen) |
 
-## Despliegue en mc.punch.com.mx
+## Despliegue en ko.punch.com.mx
 
 1. **Servidor** (VPS, Railway, Render o Fly.io):
    ```bash
@@ -50,10 +50,10 @@ en tiempo real.
      -e SESSION_SECRET=... -e AIRTABLE_TOKEN=... -e ASANA_TOKEN=... \
      -e ANTHROPIC_API_KEY=... punch-mc
    ```
-2. **HTTPS**: apunta el subdominio `mc.punch.com.mx` (registro A/CNAME en tu DNS)
+2. **HTTPS**: apunta el subdominio `ko.punch.com.mx` (registro A/CNAME en tu DNS)
    al servidor y pon Caddy enfrente (TLS automático con Let's Encrypt):
    ```
-   mc.punch.com.mx {
+   ko.punch.com.mx {
        reverse_proxy 127.0.0.1:8443
    }
    ```
