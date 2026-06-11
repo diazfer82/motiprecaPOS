@@ -1,3 +1,6 @@
 __pycache__/
 *.pyc
 mission-control/briefing.html
+node_modules/
+mission-control/app/data/
+mission-control/app/package-lock.json

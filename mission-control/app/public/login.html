@@ -1,0 +1,44 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>PUNCH! Mission Control — Acceso</title>
+<style>
+  :root { --bg:#0e0e12; --card:#17171f; --accent:#ff3d57; --text:#f2f2f5; --muted:#9a9aa8; }
+  * { box-sizing:border-box; margin:0; }
+  body { font-family:system-ui,-apple-system,sans-serif; background:var(--bg); color:var(--text);
+         min-height:100vh; display:grid; place-items:center; }
+  .card { background:var(--card); padding:2.5rem; border-radius:16px; width:min(380px,92vw);
+          box-shadow:0 20px 60px rgba(0,0,0,.5); }
+  h1 { font-size:1.4rem; margin-bottom:.25rem; } h1 span{color:var(--accent)}
+  p.sub { color:var(--muted); font-size:.85rem; margin-bottom:1.5rem; }
+  label { display:block; font-size:.8rem; color:var(--muted); margin:.9rem 0 .3rem; }
+  input { width:100%; padding:.7rem .9rem; border-radius:9px; border:1px solid #2c2c38;
+          background:#0e0e14; color:var(--text); font-size:1rem; }
+  input:focus { outline:2px solid var(--accent); border-color:transparent; }
+  button { width:100%; margin-top:1.4rem; padding:.8rem; border:none; border-radius:9px;
+           background:var(--accent); color:#fff; font-size:1rem; font-weight:700; cursor:pointer; }
+  button:hover { filter:brightness(1.1); }
+  .err { color:#ff7b8d; font-size:.85rem; margin-top:.9rem; min-height:1.2em; }
+  #totpRow { display:none; }
+</style>
+</head>
+<body>
+<form class="card" id="f">
+  <h1>PUNCH!<span> Mission Control</span></h1>
+  <p class="sub">Acceso restringido · información confidencial</p>
+  <label>Correo</label>
+  <input id="email" type="email" autocomplete="username" required>
+  <label>Contraseña</label>
+  <input id="password" type="password" autocomplete="current-password" required>
+  <div id="totpRow">
+    <label>Código 2FA (app de autenticación)</label>
+    <input id="totp" inputmode="numeric" pattern="[0-9]{6}" placeholder="123456">
+  </div>
+  <button>Entrar</button>
+  <div class="err" id="err"></div>
+</form>
+<script src="/login.js"></script>
+</body>
+</html>

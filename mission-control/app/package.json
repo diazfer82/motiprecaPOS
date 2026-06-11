@@ -1,0 +1,17 @@
+{
+  "name": "punch-mission-control",
+  "version": "1.0.0",
+  "description": "PUNCH! Marketing Mission Control — dashboard seguro con asistente de IA (PUNCHI)",
+  "type": "module",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "seed": "node scripts/seed-users.js"
+  },
+  "engines": {
+    "node": ">=20"
+  },
+  "dependencies": {
+    "@anthropic-ai/sdk": "^0.39.0"
+  }
+}
